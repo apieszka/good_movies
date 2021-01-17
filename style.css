@@ -17,3 +17,11 @@
     height: 180px;
     object-fit: cover;
 }
+
+/* Login view 
+---------------------*/
+body.login-form {
+    background-image: url("img/login_bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
