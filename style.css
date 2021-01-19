@@ -4,6 +4,13 @@
 /* Sticky footer styles
 -------------------------------------------------- */
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
 .footer {
     position: absolute;
     bottom: 0;
@@ -11,6 +18,7 @@
     height: 50px; /* Set the fixed height of the footer here */
     line-height: 50px; /* Vertically center the text there */
 }
+
 
 .my-profile-photo {
     width: 180px;
@@ -25,3 +33,4 @@ body.login-form {
     background-position: center;
     background-size: cover;
 }
+
