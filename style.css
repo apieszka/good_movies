@@ -1,9 +1,20 @@
+/* Links */
+a:hover {
+    text-decoration: none;
+}
+
+/*Navbar */
 .navbar {
     white-space: nowrap;
 }
+
+.search-form .search-icon {
+    width: 25px;
+    height: 25px;
+    }
+
 /* Sticky footer styles
 -------------------------------------------------- */
-
 html {
     position: relative;
     min-height: 100%;
@@ -34,3 +45,36 @@ body.login-form {
     background-size: cover;
 }
 
+@media only screen and (max-width: 1400px) {
+    body.login-form {
+    color: #D9A841;
+    }
+}
+    
+@media only screen and (min-width: 958px) {
+    body.login-form {
+    color: #81A64B;
+    }
+}
+    
+.card .index-card-img {
+    height: 100%;
+    }
+
+/*add film view */
+
+body.add_movie_form {
+    background: #343a40!important;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Cards */
+.card {
+    background-color: transparent;
+}
+
+.card-img-top {
+    height: 300 px;
+    object-fit: cover;
+}
