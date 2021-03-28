@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+                <section class="bg-dark text-light">
+                        <div class="container pb-4">
+                                <div class="row flex-column align-items-center">
+                                    <img class="my-profile-photo rounded-circle"
+                                         src="{% static 'img/user.jpg' %}" alt="My profile photo">
+                                    <h4 class="mt-3">
+                                        {{ request.user.first_name }}
+                                        {{ request.user.last_name }}
+                                        ({{ request.user.username }})
+                                    </h4>
+                                    <div>Konto aktywne od {{ request.user.date_joined }}</div>
+                                </div>
+                            </div>
+                            <div class="container pb-4">
+                                    <ul class="nav nav-pills mt-3 justify-content-center" id="pills-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="pills-reviews-tab" data-toggle="pill" href="#pills-reviews"
+                                               role="tab">2 Recenzje</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-recommended-tab" data-toggle="pill" href="#pills-recommended"
+                                               role="tab">3 Polecone
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-rated-tab" data-toggle="pill" href="#pills-rated"
+                                               role="tab">1 Oceniony</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-favourite-tab" data-toggle="pill" href="#pills-favourite"
+                                               role="tab">2 Ulubione</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                </section>        
+               
+                <section class="bg-light">
+                        <div class="container">
+                                <div class="row"> 
+                                    <div class="tab-content" id="pills-tabContent">
+
+                                        <div class="tab-pane fade show active " id="pills-reviews" role="tabpanel">
+                                            Recenzje
+                                            <div class="card my-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <img class="card-img" src="{% static 'img/nietykalni.jpg' %}" alt="Movie poster">
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <div class="card-body">
+                                                                <div class="content">
+                                                                    <a href="#"><h5 class="card-title">Tytuł zrecenzowanego filmu</h5></a>
+                                                                    <p class="card-text">
+                                                                        This is a wider card with supporting text below as a
+                                                                        natural lead-in to additional content. This content is a little bit
+                                                                        longer.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card my-3">
+                                                        <div class="row g-0">
+                                                            <div class="col-md-2">
+                                                                <img class="card-img" src="{% static 'img/czastki_kobiety.jpg' %}" alt="Movie poster">
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <div class="card-body">
+                                                                    <div class="content">
+                                                                        <a href="#"><h5 class="card-title">Tytuł zrecenzowanego filmu</h5></a>
+                                                                        <p class="card-text">
+                                                                            This is a wider card with supporting text below as a
+                                                                            natural lead-in to additional content. This content is a little bit
+                                                                            longer.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            
+                                        
+                                        </div>
+
+                                        <div class="tab-pane fade" id="pills-recommended" role="tabpanel">
+                                            Polecone
+                                            <div class="card my-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <img class="card-img" src="img/user.jpg" alt="Movie poster">
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <div class="card-body">
+                                                                <div class="content">
+                                                                    <a href="#"><h5 class="card-title">Tytuł zrecenzowanego filmu</h5></a>
+                                                                    <p class="card-text">
+                                                                        This is a wider card with supporting text below as a
+                                                                        natural lead-in to additional content. This content is a little bit
+                                                                        longer.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card my-3">
+                                                        <div class="row g-0">
+                                                            <div class="col-md-2">
+                                                                <img class="card-img" src="img/user.jpg" alt="Movie poster">
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <div class="card-body">
+                                                                    <div class="content">
+                                                                        <a href="#"><h5 class="card-title">Tytuł zrecenzowanego filmu</h5></a>
+                                                                        <p class="card-text">
+                                                                            This is a wider card with supporting text below as a
+                                                                            natural lead-in to additional content. This content is a little bit
+                                                                            longer.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card my-3">
+                                                            <div class="row g-0">
+                                                                <div class="col-md-2">
+                                                                    <img class="card-img" src="img/user.jpg" alt="Movie poster">
+                                                                </div>
+                                                                <div class="col-md-10">
+                                                                    <div class="card-body">
+                                                                        <div class="content">
+                                                                            <a href="#"><h5 class="card-title">Tytuł zrecenzowanego filmu</h5></a>
+                                                                            <p class="card-text">
+                                                                                This is a wider card with supporting text below as a
+                                                                                natural lead-in to additional content. This content is a little bit
+                                                                                longer.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                                                            
+                                        
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-rated" role="tabpanel">
+                                            Ocenione
+                                            <div class="card my-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <img class="card-img" src="img/user.jpg" alt="Movie poster">
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <div class="card-body">
+                                                                <div class="content">
+                                                                    <a href="#"><h5 class="card-title">Tytuł zrecenzowanego filmu</h5></a>
+                                                                    <p class="card-text">
+                                                                        This is a wider card with supporting text below as a
+                                                                        natural lead-in to additional content. This content is a little bit
+                                                                        longer.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-favourite" role="tabpanel">
+                                            Ulubione
+                                            <div class="card my-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <img class="card-img" src="img/user.jpg" alt="Movie poster">
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <div class="card-body">
+                                                                <div class="content">
+                                                                    <a href="#"><h5 class="card-title">Tytuł zrecenzowanego filmu</h5></a>
+                                                                    <p class="card-text">
+                                                                        This is a wider card with supporting text below as a
+                                                                        natural lead-in to additional content. This content is a little bit
+                                                                        longer.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card my-3">
+                                                        <div class="row g-0">
+                                                            <div class="col-md-2">
+                                                                <img class="card-img" src="img/user.jpg" alt="Movie poster">
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <div class="card-body">
+                                                                    <div class="content">
+                                                                        <a href="#"><h5 class="card-title">Tytuł zrecenzowanego filmu</h5></a>
+                                                                        <p class="card-text">
+                                                                            This is a wider card with supporting text below as a
+                                                                            natural lead-in to additional content. This content is a little bit
+                                                                            longer.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                </section>
+{% endblock %} 

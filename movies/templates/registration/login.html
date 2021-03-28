@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block body_class %}login_form{% endblock %}
+
+{% block content %}
+
+            <section>
+                        <div class="container mt-3">
+                            <div class="row">
+                                <form class="col-12 col-md-6 bg-light p-3 m-auto"
+                                    method = "post" action="{% url 'login' %}">
+                                    {% csrf_token %}
+                                    
+                                    {% if form.errors %}
+                                        <p class="alert alert-danger">
+                                        Your username and password didn't match. Please try again.
+                                        </p>
+                                    {% endif %}
+                                    <h4 class="text-center my-4">ZALOGUJ SIĘ DO SERWISU</h4>
+                                    <div class="form-group">
+                                        <label for="user-name" class="sr-only">Nazwa użytkownika</label>
+                                        <input name ="username" type="text" class="form-control bg-transparent border-left-0 border-top-0 border-right-0 border-primary rounded-0" id="user-name" placeholder="*Nazwa użytkownika">
+                                     </div>
+                                    <!-- <div class="form-group">
+                                        <label for="user-email" class="sr-only">*Adres E-mail</label>
+                                        <input type="email" class="form-control bg-transparent border-left-0 border-top-0 border-right-0 border-primary rounded-0" id="user-email" aria-describedby="emailHelp"
+                                            placeholder="*Adres E-mail">
+                                     </div> -->
+                                    <div class="form-group">
+                                        <label for="user-password" class="sr-only">Hasło</label>
+                                        <input name = "password" type="password" class="form-control bg-transparent border-left-0 border-top-0 border-right-0 border-primary rounded-0" id="user-password" placeholder="*Hasło">
+                                     </div>
+                                    <!-- <div class="form-group">
+                                        <label for="user-confirm-password" class="sr-only">*Powtórz hasło</label>
+                                        <input type="password" class="form-control bg-transparent border-left-0 border-top-0 border-right-0 border-primary rounded-0" id="user-confirm-password"
+                                            placeholder="*Powtórz hasło">
+                                     </div> -->
+                                    <button type="submit" class="btn btn-primary d-block ml-auto my-3">Zapisz</button>
+                                 </form>
+                             </div>
+                        </div>
+                </section>
+
+{% endblock %}
+
