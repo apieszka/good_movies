@@ -14,7 +14,7 @@
                                         {{ request.user.last_name }}
                                         ({{ request.user.username }})
                                     </h4>
-                                    <div>Konto aktywne od {{ request.user.date_joined }}</div>
+                                    <div>Konto aktywne od {{ request.user.date_joined|date:"d.m.Y"}}</div>
                                 </div>
                             </div>
                             <div class="container pb-4">

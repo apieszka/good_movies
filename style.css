@@ -1,9 +1,12 @@
 /* Links */
+
 a:hover {
     text-decoration: none;
 }
 
+
 /*Navbar */
+
 .navbar {
     white-space: nowrap;
 }
@@ -11,25 +14,31 @@ a:hover {
 .search-form .search-icon {
     width: 25px;
     height: 25px;
-    }
+}
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
+
 html {
     position: relative;
     min-height: 100%;
 }
+
 body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    /* Margin bottom by footer height */
 }
+
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 50px; /* Set the fixed height of the footer here */
-    line-height: 50px; /* Vertically center the text there */
+    height: 50px;
+    /* Set the fixed height of the footer here */
+    line-height: 50px;
+    /* Vertically center the text there */
 }
-
 
 .my-profile-photo {
     width: 180px;
@@ -37,8 +46,10 @@ body {
     object-fit: cover;
 }
 
+
 /* Login view 
 ---------------------*/
+
 body.login-form {
     background-image: url("img/login_bg.jpg");
     background-position: center;
@@ -47,19 +58,20 @@ body.login-form {
 
 @media only screen and (max-width: 1400px) {
     body.login-form {
-    color: #D9A841;
+        color: #D9A841;
     }
 }
-    
+
 @media only screen and (min-width: 958px) {
     body.login-form {
-    color: #81A64B;
+        color: rgb(38, 38, 104);
     }
 }
-    
+
 .card .index-card-img {
     height: 100%;
-    }
+}
+
 
 /*add film view */
 
@@ -69,7 +81,9 @@ body.add_movie_form {
     background-size: cover;
 }
 
+
 /* Cards */
+
 .card {
     background-color: transparent;
 }

@@ -17,15 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 from movies import views #NOWE
+from django.contrib.auth.views import LoginView, LogoutView
+from movies.views import ZeroConfigurationDatatableView 
 
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/profile/', views.my_profile, name='my_profile'),
     path('admin/', admin.site.urls),
     path('hello/', views.hello),
-    #path('index/', views.index), #nowe
+    path('index/', views.index, name='index'), #nowe
     path('subpage/', views.subpage),
     path('filmy/', views.list_movies),
-    path('', views.index),
+    path('', views.hello),
     path('accounts/signup/', views.user_signup, name='user_signup'),
+    path('accounts/login/', LoginView.as_view(template_name='registration/login.html')),
+    path('accounts/logout/', views.logout_view, name='logout'),
+    path('topmovies/', ZeroConfigurationDatatableView.as_view(), name="top_movies"),
 ]
